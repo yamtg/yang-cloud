@@ -1,0 +1,16 @@
+server:
+  port: 80
+zuul:
+  routes:
+    oauth2:
+      path: /oauth2/**
+      serviceId: yang-cloud-oauth2-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    root: info
+    org.springframework.security: debug
+debug: true

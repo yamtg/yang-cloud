@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud.iml" filepath="$PROJECT_DIR$/yang-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-eureka-server/yang-cloud-eureka-server.iml" filepath="$PROJECT_DIR$/yang-cloud-eureka-server/yang-cloud-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-gateway/yang-cloud-gateway.iml" filepath="$PROJECT_DIR$/yang-cloud-gateway/yang-cloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-oauth2-server/yang-cloud-oauth2-server.iml" filepath="$PROJECT_DIR$/yang-cloud-oauth2-server/yang-cloud-oauth2-server.iml" />
+    </modules>
+  </component>
+</project>

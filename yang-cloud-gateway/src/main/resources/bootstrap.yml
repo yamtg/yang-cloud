@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: yang-cloud-gateway
+  profiles:
+    active: dev

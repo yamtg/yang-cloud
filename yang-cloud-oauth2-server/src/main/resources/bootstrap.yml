@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: yang-cloud-oauth2-server
+  profiles:
+    active: dev

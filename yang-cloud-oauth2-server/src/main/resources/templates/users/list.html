@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <!-- Tether core CSS -->
@@ -65,6 +64,7 @@
             <td>ID</td>
             <td>Age</td>
             <td>Name</td>
+            <td sec:authorize="hasRole('ADMIN')">Operation</td>
         </tr>
         </thead>
         <tbody>
@@ -76,6 +76,13 @@
             <td th:text="${user.age}">11</td>
             <td th:text="${user.name}">waylau</td>
         </tr>
+        <td sec:authorize="hasRole('ADMIN')">
+            <div >
+                <a th:href="@{'/users/delete/1'}">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+        </td>
         </tbody>
     </table>
 

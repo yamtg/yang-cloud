@@ -12,3 +12,7 @@ eureka:
 management:
   security:
     enabled: false
+spring:
+  devtools:
+    livereload:
+      port: 35721

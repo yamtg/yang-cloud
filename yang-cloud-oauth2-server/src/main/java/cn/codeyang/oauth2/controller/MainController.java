@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.security.Principal;
+
 /**
  * Created by yangzhongyang on 17/11/7
  */
@@ -12,7 +14,8 @@ public class MainController {
 
     @GetMapping("/")
     public String root(){
-        return "redirect:/index";
+        //return "redirect:/index";
+        return "index";
     }
 
     @GetMapping("/index")
@@ -36,4 +39,6 @@ public class MainController {
     public String accesssDenied() {
         return "403";
     }
+
+
 }

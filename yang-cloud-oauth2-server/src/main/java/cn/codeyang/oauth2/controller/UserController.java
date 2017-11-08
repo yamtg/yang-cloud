@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,5 +43,10 @@ public class UserController {
         model.addAttribute("userList", userService.listUsers());
         model.addAttribute("title", "删除用户");
         return new ModelAndView("users/list", "userModel", model);
+    }
+
+    @GetMapping("/me")
+    public Principal me(Principal principal){
+        return principal;
     }
 }

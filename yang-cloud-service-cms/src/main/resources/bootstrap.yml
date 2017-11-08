@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: yang-cloud-service-cms
+  profiles:
+    active: dev
+server:
+  port: 3321
+  context-path: /cms

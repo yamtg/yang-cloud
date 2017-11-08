@@ -2,18 +2,38 @@ server:
   port: 3333
 zuul:
   routes:
-    oauth2:
+    oauth2-server:
       path: /oauth2/**
       serviceId: yang-cloud-oauth2-server
-#      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+      stripPrefix: false
+      sensitiveHeaders:
+    cms-server:
+      path: /cms/**
+      serviceId: yang-cloud-service-cms
+      stripPrefix: false
+      sensitiveHeaders:
+  add-proxy-headers: true
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-#  instance:
-#    prefer-ip-address: true
 logging:
   level:
     root: info
     org.springframework.security: debug
 debug: true
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8762/oauth2/oauth/check_token
+      prefer-token-info: true
+    sso:
+      login-path: /login
+    client:
+      client-id: webapp
+      access-token-uri: http://localhost:8762/oauth2/oauth/token
+      user-authorization-uri: http://localhost:8762/oauth2/oauth/authorize
+spring:
+  devtools:
+    livereload:
+      port: 35724

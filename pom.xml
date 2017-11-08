@@ -25,12 +25,16 @@
     <yang-cloud-eureka-server.version>1.0-SNAPSHOT</yang-cloud-eureka-server.version>
     <yang-cloud-oauth2-server.version>1.0-SNAPSHOT</yang-cloud-oauth2-server.version>
     <yang-cloud-gateway.version>1.0-SNAPSHOT</yang-cloud-gateway.version>
+    <yang-cloud-common-pojo.version>1.0-SNAPSHOT</yang-cloud-common-pojo.version>
+    <yang-cloud-service-cms.version>1.0-SNAPSHOT</yang-cloud-service-cms.version>
   </properties>
 
   <modules>
     <module>yang-cloud-eureka-server</module>
     <module>yang-cloud-oauth2-server</module>
     <module>yang-cloud-gateway</module>
+    <module>yang-cloud-common-pojo</module>
+    <module>yang-cloud-service-cms</module>
   </modules>
 
 
@@ -75,6 +79,12 @@
         <groupId>org.springframework.security</groupId>
         <artifactId>spring-security-test</artifactId>
         <version>4.2.3.RELEASE</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.codeyang</groupId>
+        <artifactId>yang-cloud-common-pojo</artifactId>
+        <version>1.0-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

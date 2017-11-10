@@ -1,4 +1,4 @@
-package cn.codeyang.gateway.security.conf;
+package cn.codeyang.security.conf;
 
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.context.annotation.Bean;
@@ -12,12 +12,12 @@ import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResourceDetails;
 
 /**
- * Created by yangzhongyang on 17/11/8
+ * Created by yangzhongyang on 17/11/10
  */
 @Configuration
-@EnableOAuth2Sso
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@EnableOAuth2Sso
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     /**
      * 从1.4.0以后需要手动创建
      * https://github.com/spring-projects/spring-boot/commit/00f9adafd7bcd23191251ebf6ca50f69ef166077

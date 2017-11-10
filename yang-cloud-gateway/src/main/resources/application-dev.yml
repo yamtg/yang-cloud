@@ -26,11 +26,12 @@ security:
   oauth2:
     resource:
       token-info-uri: http://localhost:8762/oauth2/oauth/check_token
-      prefer-token-info: true
+      prefer-token-info: true  #是否使用token-info  当使用user-info时设置为false即可
     sso:
       login-path: /login
     client:
-      client-id: webapp
+      client-id: client
+      client-secret: secret
       access-token-uri: http://localhost:8762/oauth2/oauth/token
       user-authorization-uri: http://localhost:8762/oauth2/oauth/authorize
 spring:

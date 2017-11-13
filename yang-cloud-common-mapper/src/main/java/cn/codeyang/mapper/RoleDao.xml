@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.codeyang.mapper.RoleDao">
+    <!--auto generated Code-->
+    <resultMap id="BaseResultMap" type="cn.codeyang.pojo.Role">
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="BaseResultMapForCollection" type="cn.codeyang.pojo.Role">
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <collection property="authorities" ofType="cn.codeyang.pojo.Authority">
+            <result column="id" property="id" jdbcType="BIGINT"/>
+            <result column="authority" property="authority" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="Base_Column_List">
+        id,
+        name
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="role.id">
+        INSERT INTO role (
+            id,
+            name
+        ) VALUES (
+            #{role.id,jdbcType=BIGINT},
+            #{role.name,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="role.id">
+        INSERT INTO role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="role.id!=null"> id,</if>
+            <if test="role.name!=null"> name,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="role.id!=null">#{role.id,jdbcType=BIGINT},
+            </if>
+            <if test="role.name!=null">#{role.name,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO role (
+        <include refid="Base_Column_List"/>
+        )VALUES
+        <foreach collection="roles" item="role" index="index" separator=",">
+            (
+            #{role.id,jdbcType=BIGINT},
+            #{role.name,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE role
+        <set>
+            <if test="role.id != null"> id= #{role.id,jdbcType=BIGINT},</if>
+            <if test="role.name != null"> name= #{role.name,jdbcType=VARCHAR}</if>
+        </set>
+        WHERE id = #{role.id,jdbcType=BIGINT}
+    </update>
+    
+    <select id="findByUser" resultMap="BaseResultMapForCollection">
+        SELECT tor.id, tor.name, oa.id, oa.authority
+        FROM oauth_role_user oru
+            LEFT JOIN oauth_role tor
+                ON oru.group_id = tor.id
+            LEFT JOIN oauth_role_authority ora
+                ON tor.id = ora.group_id
+            LEFT JOIN oauth_authority oa
+                ON ora.authority_id = oa.id
+        WHERE oru.user_id = #{userId};
+    </select>
+</mapper>
+

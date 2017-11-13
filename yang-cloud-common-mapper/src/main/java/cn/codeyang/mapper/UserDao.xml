@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.codeyang.mapper.UserDao">
+    <!--auto generated Code-->
+    <resultMap id="BaseResultMap" type="cn.codeyang.pojo.User">
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="is_enabled" property="isEnabled" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="Base_Column_List">
+        id,
+        username,
+        password,
+        is_enabled
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="user.id">
+        INSERT INTO user (
+            id,
+            username,
+            password,
+            is_enabled
+        ) VALUES (
+            #{user.id,jdbcType=BIGINT},
+            #{user.username,jdbcType=VARCHAR},
+            #{user.password,jdbcType=VARCHAR},
+            #{user.isEnabled,jdbcType=TINYINT}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="user.id">
+        INSERT INTO user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="user.id!=null"> id,</if>
+            <if test="user.username!=null"> username,</if>
+            <if test="user.password!=null"> password,</if>
+            <if test="user.isEnabled!=null"> is_enabled,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="user.id!=null">#{user.id,jdbcType=BIGINT},
+            </if>
+            <if test="user.username!=null">#{user.username,jdbcType=VARCHAR},
+            </if>
+            <if test="user.password!=null">#{user.password,jdbcType=VARCHAR},
+            </if>
+            <if test="user.isEnabled!=null">#{user.isEnabled,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO user (
+        <include refid="Base_Column_List"/>
+        )VALUES
+        <foreach collection="users" item="user" index="index" separator=",">
+            (
+            #{user.id,jdbcType=BIGINT},
+            #{user.username,jdbcType=VARCHAR},
+            #{user.password,jdbcType=VARCHAR},
+            #{user.isEnabled,jdbcType=TINYINT}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE user
+        <set>
+            <if test="user.id != null"> id= #{user.id,jdbcType=BIGINT},</if>
+            <if test="user.username != null"> username= #{user.username,jdbcType=VARCHAR},</if>
+            <if test="user.password != null"> password= #{user.password,jdbcType=VARCHAR},</if>
+            <if test="user.isEnabled != null"> is_enabled= #{user.isEnabled,jdbcType=TINYINT}</if>
+        </set>
+        WHERE id = #{user.id,jdbcType=BIGINT}
+    </update>
+    <select id="findAll" resultType="cn.codeyang.pojo.User">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM oauth_user
+    </select>
+    <select id="findByUsername" resultType="cn.codeyang.pojo.User">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM oauth_user WHERE username = #{username}
+    </select>
+</mapper>
+

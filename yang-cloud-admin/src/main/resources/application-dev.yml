@@ -1,0 +1,13 @@
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+debug: true
+spring:
+  boot:
+    admin:
+      turbine:
+        location: yang-cloud-turbine-server

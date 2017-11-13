@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.codeyang.mapper.AuthorityDao">
+    <!--auto generated Code-->
+    <resultMap id="BaseResultMap" type="cn.codeyang.pojo.Authority">
+        <result column="id" property="id" jdbcType="BIGINT"/>
+        <result column="authority" property="authority" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="Base_Column_List">
+        id,
+        authority
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="authority.id">
+        INSERT INTO authority (
+            id,
+            authority
+        ) VALUES (
+            #{authority.id,jdbcType=BIGINT},
+            #{authority.authority,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="authority.id">
+        INSERT INTO authority
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="authority.id!=null"> id,</if>
+            <if test="authority.authority!=null"> authority,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="authority.id!=null">#{authority.id,jdbcType=BIGINT},
+            </if>
+            <if test="authority.authority!=null">#{authority.authority,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO authority (
+        <include refid="Base_Column_List"/>
+        )VALUES
+        <foreach collection="authoritys" item="authority" index="index" separator=",">
+            (
+            #{authority.id,jdbcType=BIGINT},
+            #{authority.authority,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE authority
+        <set>
+            <if test="authority.id != null"> id= #{authority.id,jdbcType=BIGINT},</if>
+            <if test="authority.authority != null"> authority= #{authority.authority,jdbcType=VARCHAR}</if>
+        </set>
+        WHERE id = #{authority.id,jdbcType=BIGINT}
+    </update>
+    <select id="findByUser" resultType="cn.codeyang.pojo.Authority">
+        SELECT
+            t2.id, t2.authority
+        FROM oauth_user_authorities t1 LEFT JOIN oauth_authority t2 ON t1.authority_id = t2.id
+        WHERE t1.user_id = #{userId}
+    </select>
+</mapper>
+

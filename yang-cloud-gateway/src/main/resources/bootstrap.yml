@@ -3,3 +3,5 @@ spring:
     name: yang-cloud-gateway
   profiles:
     active: dev
+zuul:
+  add-host-header: true

@@ -10,10 +10,13 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
+import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
+import javax.sql.DataSource;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -27,6 +30,9 @@ public class AuthenticationServerConfig extends AuthorizationServerConfigurerAda
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private DataSource dataSource;
+
 
     /**
      * 暂时将token存储在内存中
@@ -34,7 +40,7 @@ public class AuthenticationServerConfig extends AuthorizationServerConfigurerAda
      */
     @Bean
     public TokenStore tokenStore(){
-        return new InMemoryTokenStore();
+        return new JdbcTokenStore(dataSource);
     }
 
 
@@ -57,15 +63,16 @@ public class AuthenticationServerConfig extends AuthorizationServerConfigurerAda
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("client")
-                .secret("secret")
-                .authorizedGrantTypes("authorization_code", "password", "refresh_token")
-                .scopes("app")
-                .and()
-                .withClient("webapp")
-                .authorizedGrantTypes("implicit")
-                .scopes("webapp");
+        clients.withClientDetails(new JdbcClientDetailsService(dataSource));
+        //clients.inMemory()
+        //        .withClient("client")
+        //        .secret("secret")
+        //        .authorizedGrantTypes("authorization_code", "password", "refresh_token")
+        //        .scopes("app")
+        //        .and()
+        //        .withClient("webapp")
+        //        .authorizedGrantTypes("implicit")
+        //        .scopes("webapp");
     }
 
     /**

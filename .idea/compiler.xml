@@ -7,20 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="yang-cloud-admin" />
+        <module name="yang-cloud-common-mapper" />
         <module name="yang-cloud-common-pojo" />
         <module name="yang-cloud-eureka-server" />
         <module name="yang-cloud-gateway" />
         <module name="yang-cloud-oauth2-server" />
         <module name="yang-cloud-service-cms" />
+        <module name="yang-cloud-turbine-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="yang-cloud" target="1.8" />
+      <module name="yang-cloud-admin" target="1.8" />
+      <module name="yang-cloud-common-mapper" target="1.8" />
       <module name="yang-cloud-common-pojo" target="1.8" />
       <module name="yang-cloud-eureka-server" target="1.8" />
       <module name="yang-cloud-gateway" target="1.8" />
       <module name="yang-cloud-oauth2-server" target="1.8" />
       <module name="yang-cloud-service-cms" target="1.8" />
+      <module name="yang-cloud-turbine-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -18,15 +18,18 @@
     <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
 
 
-    <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
-    <spring-cloud.version>Dalston.SR1</spring-cloud.version>
+    <spring-boot.version>1.5.8.RELEASE</spring-boot.version>
+    <spring-cloud.version>Dalston.SR3</spring-cloud.version>
 
 
     <yang-cloud-eureka-server.version>1.0-SNAPSHOT</yang-cloud-eureka-server.version>
     <yang-cloud-oauth2-server.version>1.0-SNAPSHOT</yang-cloud-oauth2-server.version>
     <yang-cloud-gateway.version>1.0-SNAPSHOT</yang-cloud-gateway.version>
     <yang-cloud-common-pojo.version>1.0-SNAPSHOT</yang-cloud-common-pojo.version>
+    <yang-cloud-common-mapper.version>1.0-SNAPSHOT</yang-cloud-common-mapper.version>
     <yang-cloud-service-cms.version>1.0-SNAPSHOT</yang-cloud-service-cms.version>
+    <yang-cloud-admin.version>1.0-SNAPSHOT</yang-cloud-admin.version>
+    <yang-cloud-turbine-server.version>1.0-SNAPSHOT</yang-cloud-turbine-server.version>
   </properties>
 
   <modules>
@@ -34,7 +37,10 @@
     <module>yang-cloud-oauth2-server</module>
     <module>yang-cloud-gateway</module>
     <module>yang-cloud-common-pojo</module>
+    <module>yang-cloud-common-mapper</module>
     <module>yang-cloud-service-cms</module>
+    <module>yang-cloud-admin</module>
+    <module>yang-cloud-turbine-server</module>
   </modules>
 
 
@@ -85,6 +91,52 @@
         <groupId>cn.codeyang</groupId>
         <artifactId>yang-cloud-common-pojo</artifactId>
         <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.codeyang</groupId>
+        <artifactId>yang-cloud-common-mapper</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper-spring-boot-starter</artifactId>
+        <version>1.1.3</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>1.3.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-server</artifactId>
+        <version>1.5.4</version>
+      </dependency>
+      <dependency>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-server-ui</artifactId>
+        <version>1.5.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
+        <version>1.5.4</version>
+      </dependency>
+      <dependency>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-server-ui-turbine</artifactId>
+        <version>1.5.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-starter-client</artifactId>
+        <version>1.5.4</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

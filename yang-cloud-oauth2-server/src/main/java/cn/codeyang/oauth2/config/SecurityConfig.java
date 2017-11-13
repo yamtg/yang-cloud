@@ -1,5 +1,6 @@
 package cn.codeyang.oauth2.config;
 
+import cn.codeyang.oauth2.component.JdbcUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +15,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /**
@@ -26,6 +28,14 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private JdbcUserDetailsService jdbcUserDetailsService;
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -57,8 +67,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN", "USER")
-                .and().withUser("zhangsan").password("hello").roles("USER");
+        auth.userDetailsService(jdbcUserDetailsService).passwordEncoder(passwordEncoder());
+        // remember me
+        auth.eraseCredentials(false);
+        //auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN", "USER")
+        //        .and().withUser("zhangsan").password("hello").roles("USER");
     }
 
     ///**

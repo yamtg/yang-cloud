@@ -5,4 +5,6 @@ spring:
     active: dev
 server:
   port: 8762
-  context-path: /oauth2
+management:
+  security:
+    enabled: false

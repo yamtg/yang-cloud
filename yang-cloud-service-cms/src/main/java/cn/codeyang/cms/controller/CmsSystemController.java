@@ -1,27 +1,29 @@
 package cn.codeyang.cms.controller;
 
-import cn.codeyang.cms.entity.CmsSystem;
 import cn.codeyang.cms.service.CmsSystemService;
+import cn.codeyang.mapper.CmsSystemDao;
+import cn.codeyang.pojo.CmsSystem;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 /**
- * Created by yangzhongyang on 17/11/8
+ * Created by yangzhongyang on 17/11/14
  */
 @RestController
-@RequestMapping("/system")
-public class CmsSystemController {
-
+public class CmsSystemController implements CmsSystemService{
 
     @Autowired
-    private CmsSystemService systemService;
+    private CmsSystemDao cmsSystemDao;
 
-    @GetMapping
-    public List<CmsSystem> index(){
-        return systemService.findAll();
+    public List<CmsSystem> findAll() {
+        return cmsSystemDao.findAll();
+    }
+
+    @Override
+    public String test() {
+        return "String";
     }
 }

@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-server" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-job" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-search" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-server" />
+    <file type="web" url="file://$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-admin" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/yang-cloud-admin/pom.xml" />
         <option value="$PROJECT_DIR$/yang-cloud-turbine-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../../git/zheng/pom.xml" />
+        <option value="$PROJECT_DIR$/yang-cloud-web-cms/pom.xml" />
+        <option value="$PROJECT_DIR$/yang-cloud-api-cms/pom.xml" />
+        <option value="$PROJECT_DIR$/yang-cloud-feign-service-api/pom.xml" />
+        <option value="$PROJECT_DIR$/yang-cloud-feign-service/pom.xml" />
+        <option value="$PROJECT_DIR$/yang-cloud-feign-consumer/pom.xml" />
       </list>
     </option>
   </component>

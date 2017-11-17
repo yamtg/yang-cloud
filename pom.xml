@@ -30,6 +30,11 @@
     <yang-cloud-service-cms.version>1.0-SNAPSHOT</yang-cloud-service-cms.version>
     <yang-cloud-admin.version>1.0-SNAPSHOT</yang-cloud-admin.version>
     <yang-cloud-turbine-server.version>1.0-SNAPSHOT</yang-cloud-turbine-server.version>
+    <yang-cloud-api-cms.version>1.0-SNAPSHOT</yang-cloud-api-cms.version>
+    <yang-cloud-web-cms.version>1.0-SNAPSHOT</yang-cloud-web-cms.version>
+    <yang-cloud-feign-service-api.version>1.0-SNAPSHOT</yang-cloud-feign-service-api.version>
+    <yang-cloud-feign-service.version>1.0-SNAPSHOT</yang-cloud-feign-service.version>
+    <yang-cloud-feign-consumer.version>1.0-SNAPSHOT</yang-cloud-feign-consumer.version>
   </properties>
 
   <modules>
@@ -38,9 +43,14 @@
     <module>yang-cloud-gateway</module>
     <module>yang-cloud-common-pojo</module>
     <module>yang-cloud-common-mapper</module>
+    <module>yang-cloud-api-cms</module>
     <module>yang-cloud-service-cms</module>
+    <module>yang-cloud-web-cms</module>
     <module>yang-cloud-admin</module>
     <module>yang-cloud-turbine-server</module>
+    <module>yang-cloud-feign-service-api</module>
+    <module>yang-cloud-feign-service</module>
+    <module>yang-cloud-feign-consumer</module>
   </modules>
 
 
@@ -137,6 +147,18 @@
         <groupId>de.codecentric</groupId>
         <artifactId>spring-boot-admin-starter-client</artifactId>
         <version>1.5.4</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.github.openfeign</groupId>
+        <artifactId>feign-httpclient</artifactId>
+        <version>9.5.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>cn.codeyang</groupId>
+        <artifactId>yang-cloud-api-cms</artifactId>
+        <version>1.0-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

@@ -57,10 +57,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
@@ -69,10 +65,25 @@
 			<groupId>cn.codeyang</groupId>
 			<artifactId>yang-cloud-common-pojo</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>cn.codeyang</groupId>
+			<artifactId>yang-cloud-common-mapper</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.codeyang</groupId>
+			<artifactId>yang-cloud-api-cms</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jmnarloch</groupId>
+			<artifactId>feign-oauth2-spring-cloud-starter</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 
 	</dependencies>

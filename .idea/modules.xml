@@ -4,13 +4,71 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/yang-cloud.iml" filepath="$PROJECT_DIR$/yang-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-admin/yang-cloud-admin.iml" filepath="$PROJECT_DIR$/yang-cloud-admin/yang-cloud-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-api-cms/yang-cloud-api-cms.iml" filepath="$PROJECT_DIR$/yang-cloud-api-cms/yang-cloud-api-cms.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-common-mapper/yang-cloud-common-mapper.iml" filepath="$PROJECT_DIR$/yang-cloud-common-mapper/yang-cloud-common-mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-common-pojo/yang-cloud-common-pojo.iml" filepath="$PROJECT_DIR$/yang-cloud-common-pojo/yang-cloud-common-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-eureka-server/yang-cloud-eureka-server.iml" filepath="$PROJECT_DIR$/yang-cloud-eureka-server/yang-cloud-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-feign-consumer/yang-cloud-feign-consumer.iml" filepath="$PROJECT_DIR$/yang-cloud-feign-consumer/yang-cloud-feign-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-feign-service/yang-cloud-feign-service.iml" filepath="$PROJECT_DIR$/yang-cloud-feign-service/yang-cloud-feign-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-feign-service-api/yang-cloud-feign-service-api.iml" filepath="$PROJECT_DIR$/yang-cloud-feign-service-api/yang-cloud-feign-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-gateway/yang-cloud-gateway.iml" filepath="$PROJECT_DIR$/yang-cloud-gateway/yang-cloud-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-oauth2-server/yang-cloud-oauth2-server.iml" filepath="$PROJECT_DIR$/yang-cloud-oauth2-server/yang-cloud-oauth2-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-service-cms/yang-cloud-service-cms.iml" filepath="$PROJECT_DIR$/yang-cloud-service-cms/yang-cloud-service-cms.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang-cloud-turbine-server/yang-cloud-turbine-server.iml" filepath="$PROJECT_DIR$/yang-cloud-turbine-server/yang-cloud-turbine-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang-cloud-web-cms/yang-cloud-web-cms.iml" filepath="$PROJECT_DIR$/yang-cloud-web-cms/yang-cloud-web-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-admin/zheng-admin.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-admin/zheng-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-common/zheng-api-common.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-common/zheng-api-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-rpc-api/zheng-api-rpc-api.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-rpc-api/zheng-api-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-rpc-service/zheng-api-rpc-service.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-rpc-service/zheng-api-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-server/zheng-api-server.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-api/zheng-api-server/zheng-api-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-admin/zheng-cms-admin.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-admin/zheng-cms-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-common/zheng-cms-common.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-common/zheng-cms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-dao/zheng-cms-dao.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-dao/zheng-cms-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-job/zheng-cms-job.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-job/zheng-cms-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-rpc-api/zheng-cms-rpc-api.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-rpc-api/zheng-cms-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-rpc-service/zheng-cms-rpc-service.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-rpc-service/zheng-cms-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-search/zheng-cms-search.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-search/zheng-cms-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-web/zheng-cms-web.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-cms/zheng-cms-web/zheng-cms-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-common/zheng-common.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-common/zheng-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo-rpc-api/zheng-demo-rpc-api.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo-rpc-api/zheng-demo-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo-rpc-service/zheng-demo-rpc-service.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo-rpc-service/zheng-demo-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo-web/zheng-demo-web.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-demo/zheng-demo-web/zheng-demo-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-admin/zheng-oss-admin.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-admin/zheng-oss-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-sdk/zheng-oss-sdk.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-sdk/zheng-oss-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-web/zheng-oss-web.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-oss/zheng-oss-web/zheng-oss-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-admin/zheng-pay-admin.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-admin/zheng-pay-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-common/zheng-pay-common.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-common/zheng-pay-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-dao/zheng-pay-dao.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-dao/zheng-pay-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-rpc-api/zheng-pay-rpc-api.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-rpc-api/zheng-pay-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-rpc-service/zheng-pay-rpc-service.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-rpc-service/zheng-pay-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-sdk/zheng-pay-sdk.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-sdk/zheng-pay-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-web/zheng-pay-web.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-pay/zheng-pay-web/zheng-pay-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-shop/zheng-shop.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-shop/zheng-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-common/zheng-ucenter-common.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-common/zheng-ucenter-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-dao/zheng-ucenter-dao.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-dao/zheng-ucenter-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-rpc-api/zheng-ucenter-rpc-api.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-rpc-api/zheng-ucenter-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-rpc-service/zheng-ucenter-rpc-service.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-rpc-service/zheng-ucenter-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-web/zheng-ucenter-web.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-ucenter/zheng-ucenter-web/zheng-ucenter-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-client/zheng-upms-client.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-client/zheng-upms-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-common/zheng-upms-common.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-common/zheng-upms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-dao/zheng-upms-dao.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-dao/zheng-upms-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-rpc-api/zheng-upms-rpc-api.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-rpc-api/zheng-upms-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-rpc-service/zheng-upms-rpc-service.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-rpc-service/zheng-upms-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-server/zheng-upms-server.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-upms/zheng-upms-server/zheng-upms-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-app/zheng-wechat-app.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-app/zheng-wechat-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-admin/zheng-wechat-mp-admin.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-admin/zheng-wechat-mp-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-dao/zheng-wechat-mp-dao.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-dao/zheng-wechat-mp-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-service/zheng-wechat-mp-service.iml" filepath="$PROJECT_DIR$/../../git/zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-service/zheng-wechat-mp-service.iml" />
     </modules>
   </component>
 </project>

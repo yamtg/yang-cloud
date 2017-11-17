@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.codeyang.mapper.CmsSystemDao">
+    <!--auto generated Code-->
+    <resultMap id="BaseResultMap" type="cn.codeyang.pojo.CmsSystem">
+        <result column="system_id" property="systemId" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="code" property="code" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="DATE"/>
+        <result column="order_num" property="orderNum" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="Base_Column_List">
+        system_id,
+        name,
+        code,
+        description,
+        create_time,
+        order_num
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="cmsSystem.systemId">
+        INSERT INTO cms_system (
+            system_id,
+            name,
+            code,
+            description,
+            create_time,
+            order_num
+        ) VALUES (
+            #{cmsSystem.systemId,jdbcType=BIGINT},
+            #{cmsSystem.name,jdbcType=VARCHAR},
+            #{cmsSystem.code,jdbcType=VARCHAR},
+            #{cmsSystem.description,jdbcType=VARCHAR},
+            #{cmsSystem.createTime,jdbcType=DATE},
+            #{cmsSystem.orderNum,jdbcType=INTEGER}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="cmsSystem.systemId">
+        INSERT INTO cms_system
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="cmsSystem.systemId!=null"> system_id,</if>
+            <if test="cmsSystem.name!=null"> name,</if>
+            <if test="cmsSystem.code!=null"> code,</if>
+            <if test="cmsSystem.description!=null"> description,</if>
+            <if test="cmsSystem.createTime!=null"> create_time,</if>
+            <if test="cmsSystem.orderNum!=null"> order_num,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="cmsSystem.systemId!=null">#{cmsSystem.systemId,jdbcType=BIGINT},
+            </if>
+            <if test="cmsSystem.name!=null">#{cmsSystem.name,jdbcType=VARCHAR},
+            </if>
+            <if test="cmsSystem.code!=null">#{cmsSystem.code,jdbcType=VARCHAR},
+            </if>
+            <if test="cmsSystem.description!=null">#{cmsSystem.description,jdbcType=VARCHAR},
+            </if>
+            <if test="cmsSystem.createTime!=null">#{cmsSystem.createTime,jdbcType=DATE},
+            </if>
+            <if test="cmsSystem.orderNum!=null">#{cmsSystem.orderNum,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO cms_system (
+        <include refid="Base_Column_List"/>
+        )VALUES
+        <foreach collection="cmsSystems" item="cmsSystem" index="index" separator=",">
+            (
+            #{cmsSystem.systemId,jdbcType=BIGINT},
+            #{cmsSystem.name,jdbcType=VARCHAR},
+            #{cmsSystem.code,jdbcType=VARCHAR},
+            #{cmsSystem.description,jdbcType=VARCHAR},
+            #{cmsSystem.createTime,jdbcType=DATE},
+            #{cmsSystem.orderNum,jdbcType=INTEGER}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE cms_system
+        <set>
+            <if test="cmsSystem.systemId != null"> system_id= #{cmsSystem.systemId,jdbcType=BIGINT},</if>
+            <if test="cmsSystem.name != null"> name= #{cmsSystem.name,jdbcType=VARCHAR},</if>
+            <if test="cmsSystem.code != null"> code= #{cmsSystem.code,jdbcType=VARCHAR},</if>
+            <if test="cmsSystem.description != null"> description= #{cmsSystem.description,jdbcType=VARCHAR},</if>
+            <if test="cmsSystem.createTime != null"> create_time= #{cmsSystem.createTime,jdbcType=DATE},</if>
+            <if test="cmsSystem.orderNum != null"> order_num= #{cmsSystem.orderNum,jdbcType=INTEGER}</if>
+        </set>
+        WHERE system_id = #{cmsSystem.systemId,jdbcType=BIGINT}
+    </update>
+    <select id="findAll" resultType="cn.codeyang.pojo.CmsSystem">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM cms_system
+    </select>
+</mapper>
+

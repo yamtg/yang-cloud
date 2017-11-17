@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: yang-cloud-web-cms
+  profiles:
+    active: dev
+server:
+  port: 3322
+  context-path: /cms
+feign:
+  oauth2:
+    enabled: true
